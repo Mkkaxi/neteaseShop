@@ -1,0 +1,89 @@
+<!--pages/worthbuy/worthbuy.wxml-->
+<view class="wrapper">
+  <view class="wrapper-head">
+    <view class="icon">
+      <image src="https://m.you.163.com/topic/index/img/topic_logo.c2284970.png" />
+    </view>
+    <text class="iconText">
+      严选好物 用心生活
+    </text>
+    <view class="header">
+      <image src="{{bgUrl}}"></image>
+    </view>
+
+    <view class="content">
+      <scroll-view class="scroll" scroll-x="true" bindscroll="changeLeft">
+        <view class="menu">
+          <block wx:for="{{menuList}}" wx:key="index">
+            <view class="menu-item">
+              <image src="{{item.imgUrl}}"></image>
+              <text class="menu-item-title">{{item.title}}</text>
+              <text class="menu-item-text">{{item.text}}</text>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+
+      <view class="scroll-bottom">
+        <view class="line" style="left:{{left}};"></view>
+      </view>
+    </view>
+    
+  </view>
+
+  <view class="wrapper-main">
+    <view class="left-lists">
+      <block wx:for="{{goodsListLeft}}" wx:key="index">
+        <view class="left-list">
+          <view class="left-list-img">
+            <image mode="widthFix" src="{{item.imgUrl}}">
+            </image>
+          </view>
+
+          <view class="left-list-desc">
+            <text>{{item.desc}}</text>
+          </view>
+          <view class="info">
+            <view class="info-user">
+              <image src="{{item.userImg}}">
+              </image>
+              <text class="info-user-name">{{item.userName}}</text>
+            </view>
+
+            <view class="info-look">
+              <image src="../../images/look.png"></image>
+              <text class="info-look-num">{{item.lookNum}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <view class="right-lists">
+      <block wx:for="{{goodsListRight}}" wx:key="index">
+        <view class="right-list">
+          <view class="right-list-img">
+            <image mode="widthFix" src="{{item.imgUrl}}">
+            </image>
+          </view>
+
+          <view class="right-list-desc">
+            <text>{{item.desc}}</text>
+          </view>
+          <view class="info">
+            <view class="info-user">
+              <image src="{{item.userImg}}">
+              </image>
+              <text class="info-user-name">{{item.userName}}</text>
+            </view>
+
+            <view class="info-look">
+              <image src="../../images/look.png"></image>
+              <text class="info-look-num">{{item.lookNum}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

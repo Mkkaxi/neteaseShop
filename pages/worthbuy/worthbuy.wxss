@@ -1,0 +1,177 @@
+/* pages/worthbuy/worthbuy.wxss */
+.wrapper-head {    /*页面头部*/
+  padding-top: 40rpx;
+  background-color: #eeeeee;
+  position: relative;
+  height: 615rpx;
+}
+
+.icon {
+  position: absolute;
+  width: 130rpx;
+  height: 69rpx;
+  top: 55rpx;
+  left: 20rpx;
+  z-index: 1;
+}
+.icon image {
+  width: 100%;
+  height: 100%;
+}
+
+.iconText {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  left: 160rpx;
+  top: 45rpx;
+  font-weight: 800;
+  font-size: 26rpx;
+}
+ 
+.header {  /*装背景图片的容器*/
+  width: 100%;
+  position: absolute;
+}
+.header image {
+  width: 100%;
+}
+
+.content {
+  position: absolute;
+  top: 130rpx;
+  margin-left: 2vw;
+  width: 96vw;
+  height: 520rpx;
+  background-color: #ffffff;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+
+.scroll {    /*头部滚动条*/
+  margin: 0 auto;
+  width: 96vw;
+  height: 480rpx;
+}
+
+.scroll-bottom {
+  margin: 0 auto;
+  width: 100rpx;
+  height: 4rpx;
+  background-color: #d9d9d9;
+  border-radius: 4rpx;
+  position: relative;
+}
+
+.line {
+  height: 4rpx;
+  background-color: red;
+  border-radius: 4rpx;
+  width: 40rpx;
+  position: absolute;
+}
+
+.menu {    /*头部滚动条内装所有内容的大容器*/
+  width: 1440rpx;
+  padding-top: 30rpx;
+}
+
+.menu-item {   /*头部滚动条内的每一块内容的小容器*/
+  width: 180rpx;
+  height: 220rpx;
+  text-align: center;
+  float: left;
+}
+
+.menu-item image {    
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.menu-item text {
+  display: block;
+}
+
+.menu-item-text {
+  font-size: 20rpx;
+}
+
+.wrapper-main {    /*页面下半部分，商品推送*/
+  padding: 0 2vw;
+  display: flex;
+  background-color: #eeeeee;
+  margin-bottom: 20rpx;
+}
+
+.left-list, .right-list {       /*商品推送部分分两部分，此为左边部分*/
+  width: 352.5rpx;
+  overflow: hidden;
+  border-radius: 18rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.right-list {
+  margin-left: 2vw;
+}
+
+
+
+.left-list-img, .right-list-img {   /*左边商品的图片*/
+  width: 100%;
+}
+
+.left-list text, .right-list text {
+  display: block;
+}
+
+.left-list-img image,.right-list-img image {
+  width: 100%;
+}
+
+.left-list-desc, .right-list-desc {   /*商品的内容描述*/
+  font-size: 28rpx;
+  padding: 0 10rpx;
+}
+
+.info {       /*用户信息和浏览数的总容器*/
+  margin-top: 20rpx;
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.info-user image {   
+  width: 50rpx;
+  height:50rpx;
+  border-radius: 50%;
+}
+
+.info-user text {
+  display: inline-block;
+  font-size: 20rpx;
+  vertical-align: text-top;
+  margin-left: 10rpx;
+  color: #999999;
+}
+ 
+.info-look {    /*浏览图片和浏览数的大容器*/
+  height: 30rpx; 
+  width: 100rpx;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0rpx;
+}
+
+.info-look-num {
+  font-size: 18rpx;
+  color: #999999;
+  margin-left: 5rpx;
+}
+
+.info-look image {
+  width: 30rpx;
+  height: 30rpx;
+}
