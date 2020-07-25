@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/worthbuy/worthbuy",
     "pages/goods/goods",
     "pages/sort/sort"
   ],
@@ -9,6 +10,7 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
+  
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
