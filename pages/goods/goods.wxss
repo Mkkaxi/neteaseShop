@@ -1,0 +1,64 @@
+.content-word{
+  margin-left: 20rpx;
+}
+.content-word__price{
+  color: red;
+  margin-bottom: 10rpx;
+}
+.content-word__fenqi{
+  color: red;
+  font-size: 20rpx;
+  background: pink;
+  width: 450rpx;
+  border-radius: 20px;
+  margin-bottom: 10rpx;
+}
+.content-word__name{
+  margin-bottom: 10rpx;
+}
+.content-word__reason{
+  color: gray;
+  font-size: 25rpx;
+}
+.reasons{
+  padding: 20rpx;
+  width: 650rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  background: lightgray;
+}
+.triangle{
+  margin-left: 40rpx; 
+  display:block;
+  height:0px; 
+  width:0px;
+  border:10rpx solid #ffffff;
+  border-color:transparent transparent gray transparent; 
+  border-style:solid solid solid solid;
+  line-height:0px;
+}
+.reasons-word{
+
+}
+.reasons-word image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 10rpx;
+}
+.reasons-word text{
+  font-size: 25rpx;
+  color: gray;
+}
+.address image{
+  width: 30rpx;
+  height: 30rpx;
+  position: relative;
+  right: -100rpx;
+}
+.address text{
+  display: inline-block;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}

@@ -19,13 +19,13 @@
 		"useIsolateContext": true,
 		"nodeModules": false,
 		"enhance": false,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false,
 		"showShadowRootInWxmlPanel": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.0",
-	"appid": "wxf595439bd5e2bc6b",
+	"appid": "wx4faaf6adb8582960",
 	"projectname": "neteaseShop",
 	"debugOptions": {
 		"hidedInDevtools": []

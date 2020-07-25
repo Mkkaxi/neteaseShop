@@ -1,0 +1,47 @@
+.serach{
+  width: 710rpx;
+  height: 10vh;
+  background: #ffffff;
+  border-radius: 40rpx;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  position: fixed;
+}
+.serach image{
+  width: 48rpx;
+  height: 48rpx;
+  display: inline-block;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+.serach input{
+  display: inline-block;
+  margin-left: 30rpx;
+}
+.content{
+  border-top: 1rpx solid gray;
+  display: flex;
+}
+.selectbar{
+  width: 200rpx;
+  height: 90vh;
+  border-right: 1px solid gray;
+  position: fixed;
+  top: 10vh;
+}
+.selectbar view{
+  width: 100%;
+  height: 70rpx;
+}
+.scrollbar{
+  width: 550rpx;
+  background: pink;
+  position: relative;
+  height: 90vh;
+  left: 200rpx;
+  top: 10vh;
+}
+.scrollbar-wrapper{
+
+}
