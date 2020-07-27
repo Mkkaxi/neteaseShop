@@ -1,15 +1,11 @@
 {
   "pages": [
+    "pages/goods/goods",
+    "pages/text/text",
     "pages/classify/classify",
     "pages/worthbuy/worthbuy",
     "pages/sort/sort",
-    "pages/goods/goods",
-<<<<<<< HEAD
-    "pages/text/text"
-=======
-    "pages/sort/sort"
-    
->>>>>>> 48a5132abb11077b488edf7b89056b4afb0f6e1f
+    "pages/text2/text2"
   ],
   "window": {
     "backgroundTextStyle": "light",
