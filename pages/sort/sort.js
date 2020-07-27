@@ -5,105 +5,131 @@ Page({
    * 页面的初始数据
    */
   data: {
-    serachWord: '输入你想要的内容，几秒一变',
-    myindex: 0,
-    myselectbar: [
-      { "name": "为你推荐", "index": 1 },
-      { "name": "居家生活", "index": 2 },
-      { "name": "服饰鞋包", "index": 3 },
-      { "name": "美食酒水", "index": 4 },
-      { "name": "个人清洁", "index": 5 },
-      { "name": "母婴亲子", "index": 6 },
-      { "name": "运动旅行", "index": 7 },
-      { "name": "数码家电", "index": 8 },
-      { "name": "严选全球", "index": 9 },
-      { "name": "文娱特色", "index": 10 },
-      { "name": "男装专区", "index": 11 },
-      { "name": "女装专区", "index": 12 },
-      { "name": "床品家具", "index": 13 },
-      { "name": "餐厨专区", "index": 14 },
-    ],
-    pageList: [
-      {
-
-        page: [
-          {
-            "title": "常用分类",
-            "content": [{
-              "name1": "全部商品",
-              "imgUrl": 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView'
-            },
-
-
-            {
-              "name2": "热销爆款",
-              "img2": 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView'
-            }]
-          },
-          {
-            "title": "推荐专区",
-            "content": [{
-              "name1": "员工精选",
-              "imgUrl": 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView'
-            },
-
-            {
-              "name2": "人气好物",
-              "img2": 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView'
-            }]
-          }
-        ]
+    menu: [{
+        id: 'tuijian',
+        name: '推荐专区'
       },
-    ]
+      {
+        id: 'xinpin',
+        name: '新品专区'
+      },
+      {
+        id: 'jvjia',
+        name: '居家生活'
+      },
+      {
+        id: 'fushi',
+        name: '服饰鞋包'
+      },
+      {
+        id: 'meishi',
+        name: '美食酒水'
+      },
+      {
+        id: 'gehu',
+        name: '个护清洁'
+      },
+      {
+        id: 'muying',
+        name: '母婴亲子'
+      }
+    ],
+
+    pages: [
+      {
+        /** 页面 **/
+        banner: 'https://yanxuan.nosdn.127.net/dec6ff5ae8bae410809598950ba1f5b4.jpg?quality=75&type=webp&imageView&thumbnail=0x196',
+        content: [/**obj 为页面中的小块 */  
+                    {                                
+                      title: '常用分类',
+
+                      /**页面小块中的商品部分 */
+                      goods: [ 
+                              {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                              {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                              {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'}
+                             ]
+                    },
+                    {                                
+                      title: '常用分类',
+
+                      /**页面小块中的商品部分 */
+                      goods: [ 
+                              {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                              {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                              {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'}
+                             ]
+                    },
+                    {                                
+                      title: '常用分类',
+
+                      /**页面小块中的商品部分 */
+                      goods: [ 
+                              {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                              {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                              {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'}
+                             ]
+                    },
+                    {                                
+                      title: '常用分类',
+
+                      /**页面小块中的商品部分 */
+                      goods: [ 
+                              {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                              {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                              {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'}
+                             ]
+                    }
+                  ]
+              },
+              {
+                /** 页面 **/
+                banner: 'https://yanxuan.nosdn.127.net/dec6ff5ae8bae410809598950ba1f5b4.jpg?quality=75&type=webp&imageView&thumbnail=0x196',
+                content: [/**obj 为页面中的小块 */  
+                            {                                
+                              title: '常用分类',
+        
+                              /**页面小块中的商品部分 */
+                              goods: [ 
+                                      {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                                      {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                                      {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'}
+                                     ]
+                            },
+                            {                                
+                              title: '常用分类',
+        
+                              /**页面小块中的商品部分 */
+                              goods: [ 
+                                      {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                                      {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                                      {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'}
+                                     ]
+                            },
+                            {                                
+                              title: '常用分类',
+        
+                              /**页面小块中的商品部分 */
+                              goods: [ 
+                                      {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                                      {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                                      {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'}
+                                     ]
+                            },
+                            {                                
+                              title: '常用分类',
+        
+                              /**页面小块中的商品部分 */
+                              goods: [ 
+                                      {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                                      {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'},
+                                      {imgUrl: 'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView', text: '员工精选'}
+                                     ]
+                            }
+                          ]
+              }
+            ]
   },
-
-  //   "name3":"全球美食",
-  //   "name4":"好物上新",
-  //   "name5":"家庭清洁",
-  //   "name6":"家清用品",
-  //   "name7":"减脂必备",
-  //   "name8":"女式运动裤装",
-  //   "name9":"洗护"
-  // }],
-  // "img":[{
-
-
-  //   "img3":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //   "img4":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //   "img5":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //   "img6":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //   "img7":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //   "img8":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //   "img9":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  // }]
-  //     },
-  //     {"index":2,
-  //     "title":"常用分类",
-  //     "name":[{
-  //       "name1":"全部商品",
-  //       "name2":"热销爆款",
-  //       "name3":"全球美食",
-  //       "name4":"好物上新",
-  //       "name5":"家庭清洁",
-  //       "name6":"家清用品",
-  //       "name7":"减脂必备",
-  //       "name8":"女式运动裤装",
-  //       "name9":"洗护"
-  //     }],
-  //     "img":[{
-  //       "img1":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //       "img2":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //       "img3":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //       "img4":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //       "img5":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //       "img6":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //       "img7":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //       "img8":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //       "img9":'https://yanxuan.nosdn.127.net/aa35b05c0ecf88bcceb58b9faf644cf9.png?quality=75&type=webp&imageView',
-  //     }]
-  //     },
-  //   ],
-  // }
 
 
   /**

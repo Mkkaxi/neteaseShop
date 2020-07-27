@@ -1,16 +1,51 @@
-<!-- 搜索框 -->
-<view class="serach">
-  <image src="../../images/搜索.png" />
-  <input type="text" placeholder="{{serachWord}}" confirm-type='search' />
-</view>
+<view class="wrapper">
+  <view class="navigation">
+    <view class="search">
+      <view class="search-icon">
+        <image src="../../images/search.png"></image>
+      </view>
+      <view class="search-input">
+        <input type="text" placeholder="搜索商品，共37450款好物" placeholder-style="font-size: 26rpx;" />
+      </view>
 
-<!-- 左边选项 -->
-<view class="selectbar">
-  <view wx:for="{{myselectbar}}" wx:key="index" data-index="index">{{item.name}}</view>
-</view>
-<!-- 右边 -->
-<scroll-view class="scrollbar" scroll-y="true" scroll-into-view="{{myindex}}">
-  <view class="scrollbar-wrapper" wx:for="{{pageList}}" wx:key="{{index}}">
-    <view wx:for="{{}}"></view>
+    </view>
   </view>
-</scroll-view>
+
+  <view class="main">
+    <view class="menu">
+      <block wx:for="{{menu}}" wx:key="index">
+        <view class="menu-item">
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+
+    </view>
+    <scroll-view class="pages" scroll-y="true">
+      <block wx:for="{{pages}}" wx:key="index" wx:for-item="page">
+        <view class="page">
+          <view class="banner">
+            <image mode="widthFix" src="{{page.banner}}"></image>
+          </view>
+
+          <view class="content" wx:for="{{page.content}}" wx:key="index">
+            <view class="title">
+              <text>{{item.title}}</text>
+            </view>
+            <view class="goods">
+              <view class="good" wx:for="{{item.goods}}" wx:key="index">
+                <view class="good-pic">
+                  <image mode="widthFix" src="{{item.imgUrl}}" alt="" />
+                </view>
+                <view class="good-detail">
+                  <text>{{item.text}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </block>
+    </scroll-view>
+  </view>
+
+</view>

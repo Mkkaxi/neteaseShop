@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/classify/classify",
+    "pages/sort/sort",
     "pages/worthbuy/worthbuy",
-    "pages/goods/goods",
-    "pages/sort/sort"
+    "pages/goods/goods"
+    
     
   ],
   "window": {

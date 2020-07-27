@@ -12,7 +12,7 @@
     </view>
 
     <view class="content">
-      <scroll-view class="scroll" scroll-x="true" bindscroll="changeLeft">
+      <scroll-view class="scroll" scroll-x="true" bindscroll="changeLeft" scrollbars="none">
         <view class="menu">
           <block wx:for="{{menuList}}" wx:key="index">
             <view class="menu-item">
