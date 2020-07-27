@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/worthbuy/worthbuy",
+    "pages/sort/sort",
     "pages/goods/goods",
-    "pages/sort/sort"
+    "pages/text/text"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,7 +11,6 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
