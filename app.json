@@ -2,9 +2,9 @@
   "pages": [
     "pages/sort/sort",
     "pages/worthbuy/worthbuy",
-    "pages/goods/goods"
-    
-    
+    "pages/goods/goods",
+    "pages/text/text"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

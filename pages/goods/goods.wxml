@@ -1,7 +1,9 @@
 <!-- 头部轮播图 -->
 <view class="swiper">
-  <swiper style="height:50vh" autoplay="{{true}}" >
-    <swiper-item class="swiper-item" wx:for="{{myswiper}}" wx:key="index"><image src="{{item}}" /></swiper-item>
+  <swiper style="height:45vh" autoplay="{{true}}">
+    <swiper-item class="c" wx:for="{{myswiper}}" wx:key="index">
+      <image src="{{item}}" data-index='{{index}}' bindtap='previewImg'/>
+    </swiper-item>
   </swiper>
 </view>
 <!-- 上半部的文字 -->
@@ -12,17 +14,181 @@
   <view class="content-word__reason">推荐理由</view>
 </view>
 <!-- 推荐理由 -->
-<view style="position:relative"><view class="triangle"></view></view>
+<view style="position:relative">
+  <view class="triangle"></view>
+</view>
 <view class="reasons">
   <view class="reasons-word">
-    <view class="word1"><image src="../../images/1.png"/><text>正版授权 质量可靠</text></view>
-    <view class="word2"><image src="../../images/2.png"/><text>精致做工 细节出众</text></view>
-    <view class="word3"><image src="../../images/3.png"/><text>精美手办 高度还原</text></view>
+    <view class="word1">
+      <image src="../../images/1.png" />
+      <text>正版授权 质量可靠</text>
+    </view>
+    <view class="word2">
+      <image src="../../images/2.png" />
+      <text>精致做工 细节出众</text>
+    </view>
+    <view class="word3">
+      <image src="../../images/3.png" />
+      <text>精美手办 高度还原</text>
+    </view>
   </view>
 </view>
 <!-- 邮费地址 -->
 <view class="address">
-  <view class="youfei"><text class="text1">邮费</text><text class="text2">满99免邮</text><image src="../../images/向右.png" /></view>
-  <view class="chosed"><text class="text1">已选</text><text class="text2">D.va x1</text><image src="../../images/向右.png" /></view>
-  <view class="chosed"><text class="text1">配送</text><text class="text2">至南昌市青山湖区广兰大道13号范家新村.....</text><text class="text3">19:00前完成支付，预计(明天)7月26日送达</text><image src="../../images/向右.png" /></view>
+  <view class="youfei" bind:tap="showPostage">
+    <view class="text1">
+      <text>邮费</text>
+    </view>
+    <view class="text2">
+      <text>满99免邮</text>
+    </view>
+    <view>
+      <image src="../../images/向右.png" />
+    </view>
+  </view>
+  <view class="youfei">
+    <view class="text1">
+      <text>已选</text>
+    </view>
+    <view class="text2">
+      <text>D.va x1</text>
+    </view>
+    <view>
+      <image src="../../images/向右.png" />
+    </view>
+  </view>
+  <view class="gave" bind:tap="hiddenAddress">
+    <view class="peisong">
+      <text>配送</text>
+    </view>
+    <view>
+      <view class="text4">
+        <text>{{bindAddress}}</text>
+      </view>
+      <view class="time">
+        <text>19:00前完成支付，预计(明天)7月26日送达</text>
+      </view>
+    </view>
+    <view>
+      <image src="../../images/向右.png" />
+    </view>
+  </view>
+  <view class="wyad">
+    <view>
+      <image src="../../images/点.png" />
+    </view>
+    <view>
+      <text>网易自营品牌</text>
+    </view>
+    <view>
+      <image src="../../images/点.png" />
+    </view>
+    <view>
+      <text>不支持无忧退换</text>
+    </view>
+  </view>
 </view>
+<!-- 固定的半屏弹窗 来查看邮费-->
+<view class="postage" style="display:{{myshowpostage}};">
+  <view class="postage-title"><text>邮费</text><image bind:tap="showPostage" src="../../images/X .png" /></view>
+  <view>
+    <view class="postage-no"><image src="../../images/点.png" /><text>满99免邮</text></view>
+    <view class="postage-word"><text>单笔订单金额(不含邮费),大陆地区满99元免邮</text></view>
+    <view class="postage-word"><text>不满99元收取10元邮费;港澳台地区满500元免邮</text></view>
+    <view class="postage-word"><text>不满500元收取30元邮费;海外地区以下单页提示邮费为准</text></view>
+    <!-- <view><text>满99免邮</text></view> -->
+  </view>
+</view>
+<!-- 固定的3/4屏，来获取地址 -->
+<view class="fixedAddress" style="display:{{hiddenMyAddress}}">
+  <view class="fixedAddress-title"><text>配送至</text><text style="display:inline-block;margin-left:20rpx;">{{addressInformation}}</text><text style="display:inline-block;float:right;padding-right:20rpx;color:{{mychangeColor}}" bind:tap="saveAddress" bind:tap="hiddenAddress">确定</text></view>
+  <view class="fixedAddress-city">
+    <scroll-view scroll-y="{{true}}" style="height: 65vh;">
+      <!-- 城市 -->
+      <view data-index="{{index}}" bind:tap="choseCity" wx:for="{{city}}" wx:key="index" style="display:{{showCity}}">
+        <text>{{item.city}}</text>
+      </view>
+      <view data-index="{{index}}" bind:tap="choseBlock" wx:for="{{blockList}}" data-classify="{{item}}" wx:key="index" style="display:{{showBlock}};color:{{index===myBlockColor?'red':'black'}}"><text>{{item}}</text></view>
+    </scroll-view>
+  </view>
+</view>
+<!-- 中间的轮播图 -->
+<view class="centerswiper">
+  <swiper style="height:20vh" autoplay="{{true}}">
+    <swiper-item class="swiper-item" wx:for="{{myswiperad}}" wx:key="index">
+      <image src="{{item}}" />
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 用户评价部分 -->
+<view class="evaluate">
+  <view class="person-evaluate">
+    <text>用户评价(17)</text>
+  </view>
+  <view class="viewAll">
+    <text>查看全部</text>
+  </view>
+  <view>
+    <image src="../../images/向右.png" />
+  </view>
+</view>
+<!-- 评论区 -->
+<view class="comment">
+  <view class="comment-wrapper">
+    <image class="touxiang" src="{{comment[0]}}" />
+    <view class="comment-wrapper__name">
+      <text>****心</text>
+    </view>
+    <image class="vipfive" src="../../images/vip5.png" />
+  </view>
+  <view class="comment-word">
+    <text>不错！</text>
+  </view>
+</view>
+<!-- 你可能还喜欢 -->
+<view class="wrapper-like">
+  <view class="wrapper-like__content">
+    <view class="wrapper-like__like" bind:tap="changeWrapperLike" wx:if="{{mychangewrapper}}" style="color:red">
+      <text>你可能还喜欢</text>
+    </view>
+    <view class="wrapper-like__like" bind:tap="changeWrapperLike" wx:else>
+      <text>你可能还喜欢</text>
+    </view>
+    <view class="wrapper-like__hot" bind:tap="changeWrapperHot" wx:if="{{mychangewrapper}}">
+      <text>24小时热销</text>
+    </view>
+    <view class="wrapper-like__hot" bind:tap="changeWrapperHot" wx:else style="color:red">
+      <text>24小时热销</text>
+    </view>
+  </view>
+</view>
+<!-- 一条红线 -->
+<view class="line" style="transform:translate({{translateX}},0);" bind:tap="changeWrapperLike"></view>
+
+<!-- 底部滑动块1/2存在 -->
+<view class="bottom-swiper" wx:if="{{mychangewrapper}}">
+  <swiper class="bottom-swiper__swiper" indicator-dots="true">
+    <swiper-item  class="bottom-swiper__swiper__item" wx:for="{{goods}}" wx:key="index">
+      <view class="bottom-swiper__block" wx:for="{{item}}" wx:key="index">
+        <image src="{{item.url}}" />
+        <view class="bottom-swiper__title">{{item.title}}</view>
+        <view class="bottom-swiper__price">{{item.price}}</view>
+        <view class="bottom-swiper__discount">{{item.discount}}</view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 底部滑动块1/2存在 -->
+<view class="bottom-swiper" wx:else>
+  <swiper class="bottom-swiper__swiper" indicator-dots="true">
+    <swiper-item  class="bottom-swiper__swiper__item" wx:for="{{goods2}}" wx:key="index">
+      <view class="bottom-swiper__block" wx:for="{{item}}" wx:key="index">
+        <image src="{{item.url}}" />
+        <view class="bottom-swiper__title">{{item.title}}</view>
+        <view class="bottom-swiper__price">{{item.price}}</view>
+        <view class="bottom-swiper__discount">{{item.discount}}</view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+
