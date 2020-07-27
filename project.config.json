@@ -69,6 +69,27 @@
 					"id": -1,
 					"name": "pages/classify/classify",
 					"pathName": "pages/classify/classify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goods/goods",
+					"pathName": "pages/goods/goods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/sort/sort",
+					"pathName": "pages/sort/sort",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/worthbuy/worthbuy",
+					"pathName": "pages/worthbuy/worthbuy",
 					"scene": null
 				}
 			]

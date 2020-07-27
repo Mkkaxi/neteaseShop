@@ -39,7 +39,7 @@
 
 .content {
   position: absolute;
-  top: 130rpx;
+  top: 65px;
   margin-left: 2vw;
   width: 96vw;
   height: 520rpx;
@@ -92,8 +92,15 @@
   display: block;
 }
 
+.menu-item-title {
+  font-size: 26rpx;
+  font-weight: 800;
+}
+
 .menu-item-text {
+  margin-top: 4rpx;
   font-size: 20rpx;
+  color: #999999;
 }
 
 .wrapper-main {    /*页面下半部分，商品推送*/
