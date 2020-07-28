@@ -1,3 +1,4 @@
+<view bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
 <view class="wrapper">
   <view class="navigation">
     <view class="search">
@@ -48,4 +49,5 @@
     </scroll-view>
   </view>
 
+</view>
 </view>

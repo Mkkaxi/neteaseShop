@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/text/text",
     "pages/sort/sort",
     "pages/worthbuy/worthbuy",
-    "pages/goods/goods",
-    "pages/text/text"
+    "pages/goods/goods"
 
   ],
   "window": {
@@ -11,6 +11,26 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#5DBCFF",
+    "normalColor": "#333",
+    "backgroundColor": "#fff",
+    "selectedBackgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/sort/sort",
+        "iconPath": "./images/分类_未选择.png",
+        "selectedIconPath": "./images/分类_已选择.png",
+        "text": "分类"
+      },
+      {
+        "pagePath":"pages/worthbuy/worthbuy",
+        "iconPath": "./images/值得买未选择.png",
+        "selectedIconPath": "./images/值得买已选择.png",
+        "text": "分类"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
