@@ -1,8 +1,8 @@
 <!-- 头部轮播图 -->
-<view class="swiper">
+<view class="swiper" style="width:750rpx">
   <swiper style="height:45vh" autoplay="{{true}}">
-    <swiper-item class="c" wx:for="{{myswiper}}" wx:key="index">
-      <image src="{{item}}" data-index='{{index}}' bindtap='previewImg'/>
+    <swiper-item class="swiper-item" wx:for="{{myswiper}}" wx:key="index">
+      <image mode="widthFix" src="{{item}}" data-index='{{index}}' bindtap='previewImg'/>
     </swiper-item>
   </swiper>
 </view>
