@@ -3,8 +3,8 @@
     "pages/text/text",
     "pages/sort/sort",
     "pages/worthbuy/worthbuy",
-    "pages/goods/goods"
-
+    "pages/goods/goods",
+    "pages/personal/personal"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -25,7 +25,7 @@
         "text": "分类"
       },
       {
-        "pagePath":"pages/worthbuy/worthbuy",
+        "pagePath": "pages/worthbuy/worthbuy",
         "iconPath": "./images/值得买未选择.png",
         "selectedIconPath": "./images/值得买已选择.png",
         "text": "分类"
