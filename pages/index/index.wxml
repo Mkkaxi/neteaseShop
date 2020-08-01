@@ -6,6 +6,7 @@
     <view class="icon" style="display: none;">
       <image src="https://yanxuan.nosdn.127.net/39c5e4583753d4c3cb868a64c2c109ea.png" />
     </view>
+    
 
     <view class="search" style="width: {{searchWidth}}rpx;">
       <view class="search-icon">
