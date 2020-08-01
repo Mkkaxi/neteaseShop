@@ -67,13 +67,6 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "pages/classify/classify",
-					"pathName": "pages/classify/classify",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "pages/goods/goods",
 					"pathName": "pages/goods/goods",
 					"query": "",
@@ -90,6 +83,14 @@
 					"id": -1,
 					"name": "pages/worthbuy/worthbuy",
 					"pathName": "pages/worthbuy/worthbuy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
 					"scene": null
 				}
 			]

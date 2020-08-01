@@ -1,15 +1,21 @@
 <!--pages/worthbuy/worthbuy.wxml-->
 <view class="wrapper">
-  <view class="wrapper-head">
+  <view class="wrapper-statusBar" style="height: {{statusBarHeight}}px;">
+    <image src="../../images/bc.jpg"></image>
+  </view>
+  <view class="wrapper-head" style="padding-top: {{statusBarHeight}}px;">
+
+    <view class="headerBg">
+      <image src="{{bgUrl}}"></image>
+    </view>
+    
     <view class="icon">
       <image src="https://m.you.163.com/topic/index/img/topic_logo.c2284970.png" />
     </view>
     <text class="iconText">
       严选好物 用心生活
     </text>
-    <view class="header">
-      <image src="{{bgUrl}}"></image>
-    </view>
+    
 
     <view class="content">
       <scroll-view class="scroll" scroll-x="true" bindscroll="changeLeft" scrollbars="none">
@@ -86,4 +92,8 @@
       </block>
     </view>
   </view>
+
+  <view class="loading" style="display: {{isShow?'block':'none'}};">数据加载中---</view>
+  <view class="noMore" style="display: {{noMore?'block':'none'}};">暂无更多数据---</view>
+
 </view>

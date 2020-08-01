@@ -1,0 +1,208 @@
+<!--pages/index/index.wxml-->
+<view class="wrapper">
+
+  <view class="nav-bar" style="height:{{navBarHeight}}rpx;">
+    <view class="status"></view>
+    <view class="icon" style="display: none;">
+      <image src="https://yanxuan.nosdn.127.net/39c5e4583753d4c3cb868a64c2c109ea.png" />
+    </view>
+
+    <view class="search" style="width: {{searchWidth}}rpx;">
+      <view class="search-icon">
+        <image src="../../images/search.png" />
+      </view>
+      <view class="search-input">
+        <input type="text" />
+      </view>
+    </view>
+  </view>
+  <view class="nav-bar-block" style="height:{{navBarHeight}}rpx;"></view>
+
+  <view class="main">
+
+    <view class="messages">
+      <view class="message">
+        <view class="message-icon">
+          <image src="https://yanxuan.nosdn.127.net/a03dd909803b9ac032eba58b7253a2f6.png"></image>
+        </view>
+        <view class="message-text">
+          <text>网易自营品牌</text>
+        </view>
+      </view>
+      <view class="message">
+        <view class="message-icon">
+          <image src="https://yanxuan.nosdn.127.net/2d0402ffcd52b3ec3b07422681c42a89.png"></image>
+        </view>
+        <view class="message-text">
+          <text>30天无忧退换货</text>
+        </view>
+      </view>
+      <view class="message">
+        <view class="message-icon">
+          <image src="https://yanxuan.nosdn.127.net/eb61ee48e8942dbd1784c9ee75ebe955.png"></image>
+        </view>
+        <view class="message-text">
+          <text>48小时快速退款</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="content">
+      <scroll-view class="scroll" scroll-x>
+        <view class="menu">
+          <view class="menu-item"></view>
+        </view>
+      </scroll-view>
+      <view class="bottomLine"></view>
+    </view>
+
+    <view class="banner">
+      <image mode="widthFix"
+        src="https://yanxuan.nosdn.127.net/d9b021de430394e9b274bf0455b53120.gif?imageView&quality=75" />
+    </view>
+
+    <view class="specials">
+      <view class="special">
+        <image mode="widthFix"
+          src="https://yanxuan.nosdn.127.net/60180bb820b4ddbbf9f9e782f25bd59c.png?quality=75&type=webp&imageView&thumbnail=375x0" />
+      </view>
+      <view class="special">
+        <image mode="widthFix"
+          src="https://yanxuan.nosdn.127.net/ae4b8364963f33ed94f340f825a035ea.png?quality=75&type=webp&imageView&thumbnail=375x0" />
+
+      </view>
+    </view>
+
+  </view>
+
+  <view class="footer">
+    <scroll-view class="sort" scroll-x enable-flex>
+      <block wx:for="{{menu}}" wx:key="index">
+        <view class="sort-item">
+          <view class="sort-item-title">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="sort-item-text">
+            <text>{{item.text}}</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+
+    <scroll-view class="details" scroll-x>
+      <view class="detail">
+        <!-- 页面-->
+
+
+        <view class="detail_wrapper">
+          <view class="detail-item">
+            <!-- 每件商品详情-->
+            <image
+              src="https://yanxuan-item.nosdn.127.net/0ad157da3e7dffea9957db26fa7b509f.png?type=webp&imageView&quality=65&thumbnail=330x330"
+              mode="widthFix"></image>
+            <image class="icon-img" src="https://yanxuan.nosdn.127.net/40ad31f188d80cd4c8b92a4d4a410aa3.apk"
+              mode="widthFix"></image>
+            <view class="desc">
+              <view class="desc-title">夏日清爽</view>
+              <view class="desc-eval">好评率</view>
+              <view class="desc-price">￥59</view>
+            </view>
+          </view>
+        </view>
+
+        <view class="detail_wrapper">
+          <view class="detail-item">
+            <!-- 每件商品详情-->
+            <image
+              src="https://yanxuan-item.nosdn.127.net/0ad157da3e7dffea9957db26fa7b509f.png?type=webp&imageView&quality=65&thumbnail=330x330"
+              mode="widthFix"></image>
+            <image class="icon-img" src="https://yanxuan.nosdn.127.net/40ad31f188d80cd4c8b92a4d4a410aa3.apk"
+              mode="widthFix"></image>
+            <view class="desc">
+              <view class="desc-title">夏日清爽</view>
+              <view class="desc-eval">好评率</view>
+              <view class="desc-price">￥59</view>
+            </view>
+          </view>
+        </view>
+
+        <view class="detail_wrapper">
+          <view class="detail-item">
+            <!-- 每件商品详情-->
+            <image
+              src="https://yanxuan-item.nosdn.127.net/0ad157da3e7dffea9957db26fa7b509f.png?type=webp&imageView&quality=65&thumbnail=330x330"
+              mode="widthFix"></image>
+            <image class="icon-img" src="https://yanxuan.nosdn.127.net/40ad31f188d80cd4c8b92a4d4a410aa3.apk"
+              mode="widthFix"></image>
+            <view class="desc">
+              <view class="desc-title">夏日清爽</view>
+              <view class="desc-eval">好评率</view>
+              <view class="desc-price">￥59</view>
+            </view>
+          </view>
+        </view>
+
+       
+
+      </view>
+      <view class="detail">
+        <!-- 页面-->
+
+
+        <view class="detail_wrapper">
+          <view class="detail-item">
+            <!-- 每件商品详情-->
+            <image
+              src="https://yanxuan-item.nosdn.127.net/0ad157da3e7dffea9957db26fa7b509f.png?type=webp&imageView&quality=65&thumbnail=330x330"
+              mode="widthFix"></image>
+            <image class="icon-img" src="https://yanxuan.nosdn.127.net/40ad31f188d80cd4c8b92a4d4a410aa3.apk"
+              mode="widthFix"></image>
+            <view class="desc">
+              <view class="desc-title">夏日清爽</view>
+              <view class="desc-eval">好评率</view>
+              <view class="desc-price">￥59</view>
+            </view>
+          </view>
+        </view>
+
+        <view class="detail_wrapper">
+          <view class="detail-item">
+            <!-- 每件商品详情-->
+            <image
+              src="https://yanxuan-item.nosdn.127.net/0ad157da3e7dffea9957db26fa7b509f.png?type=webp&imageView&quality=65&thumbnail=330x330"
+              mode="widthFix"></image>
+            <image class="icon-img" src="https://yanxuan.nosdn.127.net/40ad31f188d80cd4c8b92a4d4a410aa3.apk"
+              mode="widthFix"></image>
+            <view class="desc">
+              <view class="desc-title">夏日清爽</view>
+              <view class="desc-eval">好评率</view>
+              <view class="desc-price">￥59</view>
+            </view>
+          </view>
+        </view>
+
+        <view class="detail_wrapper">
+          <view class="detail-item">
+            <!-- 每件商品详情-->
+            <image
+              src="https://yanxuan-item.nosdn.127.net/0ad157da3e7dffea9957db26fa7b509f.png?type=webp&imageView&quality=65&thumbnail=330x330"
+              mode="widthFix"></image>
+            <image class="icon-img" src="https://yanxuan.nosdn.127.net/40ad31f188d80cd4c8b92a4d4a410aa3.apk"
+              mode="widthFix"></image>
+            <view class="desc">
+              <view class="desc-title">夏日清爽</view>
+              <view class="desc-eval">好评率</view>
+              <view class="desc-price">￥59</view>
+            </view>
+          </view>
+        </view>
+
+       
+
+      </view>
+
+    
+    </scroll-view>
+  </view>
+
+</view>
