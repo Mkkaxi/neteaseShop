@@ -1,0 +1,10 @@
+<!-- 存放地址 -->
+<view class="myaddress">
+  <view class="addressblock1">
+    <view class="name">{{Pname}}</view>
+    <view class="centerpart"><view class="phone">{{phonenumber}}</view><view class="saveaddress">{{bindAddress}}{{detailAddress}}</view></view>
+    <view class="changeaddress"><image src="../../images/修改.png" /></view>
+  </view>
+</view>
+<!-- 底部新建地址 -->
+<navigator url="../newAddress/newAddress"><view class="newAddress"><image src="../../images/加号.png" /><view><text>新建地址</text></view></view></navigator>
