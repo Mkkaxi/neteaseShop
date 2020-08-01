@@ -92,7 +92,14 @@
 					"pathName": "pages/index/index",
 					"query": "",
 					"scene": null
-				}
+				},
+				{
+					"id": -1,
+					"name": "pages/personal/personal",
+					"pathName": "pages/personal/personal",
+					"query": "",
+					"scene": null
+				},
 			]
 		}
 	}
