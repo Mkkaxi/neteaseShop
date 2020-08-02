@@ -70,9 +70,10 @@
   <view class="bottom-wrapper">
     <view class="bottom-items" wx:for="{{myserve}}">
       <view class="bottom-items-wrapper">
-        <view><image src="{{item.pic}}" /></view>
-        <view><text>{{item.title}}</text></view>
+        <view class="pic"><image src="{{item.pic}}" /></view>
+        <view class="text"><text>{{item.title}}</text></view>
       </view>
     </view>
   </view>
+
 </view>
