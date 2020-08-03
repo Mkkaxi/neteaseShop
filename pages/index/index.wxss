@@ -12,6 +12,7 @@
   padding: 0 25rpx;
   box-sizing: border-box;
   z-index: 1;
+  transition: height 1s ease-in-out;
 }
 
 .status {
@@ -32,20 +33,22 @@
 
 .search {
   position: absolute;
-  bottom: 5rpx;
+  bottom: 15rpx;
   left: 20rpx;
   height: 60rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #fff;
   border-radius: 50rpx;
+  transition: width 1s ease-in-out;
 }
 
 .search-icon {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
   width: 35rpx;
   height: 35rpx;
   margin-left: 20rpx;
+  float: left;
 }
 
 .search-icon image {
@@ -54,16 +57,15 @@
 }
 
 .search-input {
+  position: absolute;
+  left: 50rpx;
   height: 60rpx;
-  width: 650rpx;
+  width: 600rpx;
   display: flex;
   align-items: center;
   margin-left: 15rpx;
 }
 
-.search-input input {
-  background-color: #eee; 
-}
 
 .main {
   padding: 0 20rpx;
@@ -100,16 +102,64 @@
 }
 
 .content {
-  height: 300rpx;
+  height: 340rpx;
   background-color: #fff;
   border-radius: 12rpx;
   overflow: hidden;
 }
 
 .scroll {
-  height: 260rpx;
+  height: 300rpx;
+  margin-bottom: 20rpx;
   /* background-color: red; */
 }
+
+.menu {
+  width: 1420rpx;
+  display: flex;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  width: 142rpx;
+  text-align: center;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+}
+
+.menu-item-img {
+  width: 80rpx;
+  margin: 0 auto;
+}
+
+.menu-item-img image {
+  width: 100%;
+}
+
+.menu-item-title text {
+  font-size: 22rpx;
+}
+
+.bottomLine {
+  width: 90rpx;
+  height: 4rpx;
+  background-color: #d9d9d9;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  position: relative;
+}
+
+.line {
+  width: 35rpx;
+  height: 4rpx;
+  border-radius: 20rpx;
+  background-color: #e4181f;
+  position: absolute;
+}
+
+
 
 .banner {
   width: 100%;
@@ -173,14 +223,35 @@
   padding: 0;
 }
 
+
+
 .sort-item-title text {
   font-weight: bold;
   font-size: 28rpx;
 }
 
+.selectTitle {
+  
+}
+.selectText {
+  
+
+}
+
+.sort-item-text {
+  background-color: red;
+  border-radius: 20rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  width: 110rpx;
+  text-align: center;
+}
+
 .sort-item-text text {
   font-size: 20rpx;
-  color: #7f7f7f;
+  /* color: #7f7f7f; */
+  color: #fff;
+
 }
 
 .details {
@@ -195,18 +266,20 @@
 }
 
 .detail_wrapper {
-  width: 50%;
+  width: 100%;
   padding: 10rpx;
   box-sizing: border-box;
-  float: left;
+  overflow: hidden;
 }
 
 .detail-item {
-  width: 100%;
+  width: 47%;
+  margin: 10rpx;
   background-color: #fff;
   position: relative;
   border-radius: 15rpx;
   overflow: hidden;
+  float: left;
 }
 
 .detail-item image {
@@ -222,6 +295,20 @@
 
 .desc {
   padding: 15rpx 20rpx;
+}
+
+.desc view {
+  padding: 5rpx 0;
+}
+
+.desc-title {
+  font-size: 26rpx;
+}
+.desc-eval {
+  font-size: 22rpx;
+}
+.desc-price {
+  color: red;
 }
 
 
