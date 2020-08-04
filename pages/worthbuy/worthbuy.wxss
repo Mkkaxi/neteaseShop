@@ -1,9 +1,24 @@
 /* pages/worthbuy/worthbuy.wxss */
-.wrapper-head {    /*页面头部*/
-  padding-top: 40rpx;
+
+.wrapper {
   background-color: #eeeeee;
+}
+
+.wrapper-head {    /*页面头部*/
   position: relative;
   height: 615rpx;
+}
+
+.wrapper-statusBar {
+  width: 100%;
+  position: fixed;
+  top:0 ;
+  z-index: 1;
+}
+
+.wrapper-statusBar image {
+  width: 100%;
+  height: 100%;
 }
 
 .icon {
@@ -29,11 +44,11 @@
   font-size: 26rpx;
 }
  
-.header {  /*装背景图片的容器*/
+.headerBg {  /*装背景图片的容器*/
   width: 100%;
   position: absolute;
 }
-.header image {
+.headerBg image {
   width: 100%;
 }
 
@@ -106,11 +121,9 @@
 .wrapper-main {    /*页面下半部分，商品推送*/
   padding: 0 2vw;
   display: flex;
-  background-color: #eeeeee;
-  margin-bottom: 20rpx;
 }
 
-.left-list, .right-list {       /*商品推送部分分两部分，此为左边部分*/
+.left-list, .right-list {       /*商品推送部分分两部分*/
   width: 352.5rpx;
   overflow: hidden;
   border-radius: 18rpx;
@@ -124,7 +137,7 @@
 
 
 
-.left-list-img, .right-list-img {   /*左边商品的图片*/
+.left-list-img, .right-list-img {   /*商品的图片*/
   width: 100%;
 }
 
@@ -181,4 +194,12 @@
 .info-look image {
   width: 30rpx;
   height: 30rpx;
+}
+
+.loading, .noMore {
+  margin-top: 10rpx;
+  text-align: center;
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
 }

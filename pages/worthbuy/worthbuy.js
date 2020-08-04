@@ -12,6 +12,7 @@ Page({
   },
     
   data: {
+    statusBarHeight: wx.getSystemInfoSync().statusBarHeight,
     left:'',
     worthBuy: 'https://m.you.163.com/topic/index/img/topic_logo.c2284970.png',
     bgUrl: 'https://m.you.163.com/topic/index/img/topic_title_bg.2373a140.png',
@@ -148,8 +149,13 @@ Page({
       userImg: 'http://yanxuan.nosdn.127.net/d0929d6affc4f1272da63f13fac44c53.jpg?imageView&quality=65&thumbnail=48y48',
       userName: '选妹',
       lookNum: '3479'
-    }]
+    }],
+
+    isShow:false,
+    noMore:false
   },
+
+  
 
   /**
    * 生命周期函数--监听页面加载
@@ -187,17 +193,46 @@ Page({
   },
 
   /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    let goodsListLeft = this.data.goodsListLeft
+    let goodsListRight = this.data.goodsListRight
+    if (goodsListLeft.length < 7) {
+      this.setData({
+        isShow:true
+      })
+      setTimeout(() => {
+        goodsListLeft.push({
+          imgUrl: 'https://yanxuan.nosdn.127.net/2d9c9301e55fb077121d449b2c3d321b.jpg?imageView&thumbnail=345y345&quality=95',
+          desc: '不用咖啡机，1秒喝上堪比现磨的好咖啡',
+          userImg: 'http://yanxuan.nosdn.127.net/d4379373d8e5200bdd8430896a6a5fbf.jpg?imageView&quality=65&thumbnail=48y48',
+          userName: '网易味央：小周',
+          lookNum: '2.0万'
+        })
+        goodsListRight.push({
+          imgUrl: 'https://yanxuan.nosdn.127.net/041d52d113c20c2ad6cf6654e4dacb30.jpg?imageView&thumbnail=345y345&quality=95',
+          desc: '三伏天必囤，好评率99.9%的清火花茶',
+          userImg: 'http://yanxuan.nosdn.127.net/477aa3a42358a58a503602d054646fa4.jpg?imageView&quality=65&thumbnail=48y48',
+          userName: '网易云课堂：末末',
+          lookNum: '2553'
+        })
 
+        this.setData({
+          goodsListLeft,
+          goodsListRight,
+          isShow:false
+        })
+      
+    },2000)
+
+    } else {
+      this.setData({
+        noMore:true
+      })
+    }
+    
+    
   },
 
   /**

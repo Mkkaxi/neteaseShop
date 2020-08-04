@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/text/text",
+    "pages/index/index",
     "pages/sort/sort",
     "pages/worthbuy/worthbuy",
     "pages/goods/goods",
