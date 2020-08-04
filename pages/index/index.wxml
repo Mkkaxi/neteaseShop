@@ -3,21 +3,20 @@
 
   <view class="nav-bar" style="height:{{navBarHeight}}rpx;">
     <view class="status"></view>
-    <view class="icon" style="display: none;">
+    <view class="icon" style="display: {{isShowIcon?'blcok':'none'}};">
       <image src="https://yanxuan.nosdn.127.net/39c5e4583753d4c3cb868a64c2c109ea.png" />
     </view>
     
-
     <view class="search" style="width: {{searchWidth}}rpx;">
       <view class="search-icon">
-        <image src="../../images/search.png" />
+        <image modo="widthFix" src="../../images/search.png" />
       </view>
       <view class="search-input">
         <input type="text" />
       </view>
     </view>
   </view>
-  <view class="nav-bar-block" style="height:{{navBarHeight}}rpx;"></view>
+  <view class="nav-bar-block" style="height:{{navBarHeight}}rpx; transition: height 1s ease-in-out;" ></view>
 
   <view class="main">
 
@@ -49,12 +48,24 @@
     </view>
 
     <view class="content">
-      <scroll-view class="scroll" scroll-x>
+      <scroll-view class="scroll" scroll-x  bindscroll="changeLeft">
         <view class="menu">
-          <view class="menu-item"></view>
+          <block wx:for="{{sort}}" wx:key="index">
+            <view class="menu-item">
+              <view class="menu-item-img">
+                <image mode="widthFix" src="{{item.imgUrl}}"></image>
+              </view>
+              <view class="menu-item-title">
+                <text>{{item.title}}</text>
+              </view>
+            </view>
+          </block>
+          
         </view>
       </scroll-view>
-      <view class="bottomLine"></view>
+      <view class="bottomLine">
+        <view class="line" style="left: {{lineLeft}}px;"></view>
+      </view>
     </view>
 
     <view class="banner">
@@ -79,7 +90,7 @@
   <view class="footer">
     <scroll-view class="sort" scroll-x enable-flex>
       <block wx:for="{{menu}}" wx:key="index">
-        <view class="sort-item">
+        <view class="sort-item" id="{{item.id}}" bindtap="changeMenu">
           <view class="sort-item-title">
             <text>{{item.title}}</text>
           </view>
@@ -90,117 +101,29 @@
       </block>
     </scroll-view>
 
-    <scroll-view class="details" scroll-x>
-      <view class="detail">
+    <scroll-view class="details" scroll-x scroll-into-view="{{selectId}}" scroll-with-animation>
+
+      <view class="detail" wx:for="{{goods}}" wx:key="index" id="{{item.id}}">
         <!-- 页面-->
 
-
         <view class="detail_wrapper">
-          <view class="detail-item">
+          <view class="detail-item" wx:for="{{item.good}}" wx:key="index">
             <!-- 每件商品详情-->
             <image
-              src="https://yanxuan-item.nosdn.127.net/0ad157da3e7dffea9957db26fa7b509f.png?type=webp&imageView&quality=65&thumbnail=330x330"
+              src="{{item.imgUrl}}"
               mode="widthFix"></image>
             <image class="icon-img" src="https://yanxuan.nosdn.127.net/40ad31f188d80cd4c8b92a4d4a410aa3.apk"
               mode="widthFix"></image>
             <view class="desc">
-              <view class="desc-title">夏日清爽</view>
-              <view class="desc-eval">好评率</view>
-              <view class="desc-price">￥59</view>
+              <view class="desc-title">{{item.title}}</view>
+              <view class="desc-eval">{{item.eval}}好评率</view>
+              <view class="desc-price">￥{{item.price}}</view>
             </view>
           </view>
         </view>
-
-        <view class="detail_wrapper">
-          <view class="detail-item">
-            <!-- 每件商品详情-->
-            <image
-              src="https://yanxuan-item.nosdn.127.net/0ad157da3e7dffea9957db26fa7b509f.png?type=webp&imageView&quality=65&thumbnail=330x330"
-              mode="widthFix"></image>
-            <image class="icon-img" src="https://yanxuan.nosdn.127.net/40ad31f188d80cd4c8b92a4d4a410aa3.apk"
-              mode="widthFix"></image>
-            <view class="desc">
-              <view class="desc-title">夏日清爽</view>
-              <view class="desc-eval">好评率</view>
-              <view class="desc-price">￥59</view>
-            </view>
-          </view>
-        </view>
-
-        <view class="detail_wrapper">
-          <view class="detail-item">
-            <!-- 每件商品详情-->
-            <image
-              src="https://yanxuan-item.nosdn.127.net/0ad157da3e7dffea9957db26fa7b509f.png?type=webp&imageView&quality=65&thumbnail=330x330"
-              mode="widthFix"></image>
-            <image class="icon-img" src="https://yanxuan.nosdn.127.net/40ad31f188d80cd4c8b92a4d4a410aa3.apk"
-              mode="widthFix"></image>
-            <view class="desc">
-              <view class="desc-title">夏日清爽</view>
-              <view class="desc-eval">好评率</view>
-              <view class="desc-price">￥59</view>
-            </view>
-          </view>
-        </view>
-
        
-
       </view>
-      <view class="detail">
-        <!-- 页面-->
 
-
-        <view class="detail_wrapper">
-          <view class="detail-item">
-            <!-- 每件商品详情-->
-            <image
-              src="https://yanxuan-item.nosdn.127.net/0ad157da3e7dffea9957db26fa7b509f.png?type=webp&imageView&quality=65&thumbnail=330x330"
-              mode="widthFix"></image>
-            <image class="icon-img" src="https://yanxuan.nosdn.127.net/40ad31f188d80cd4c8b92a4d4a410aa3.apk"
-              mode="widthFix"></image>
-            <view class="desc">
-              <view class="desc-title">夏日清爽</view>
-              <view class="desc-eval">好评率</view>
-              <view class="desc-price">￥59</view>
-            </view>
-          </view>
-        </view>
-
-        <view class="detail_wrapper">
-          <view class="detail-item">
-            <!-- 每件商品详情-->
-            <image
-              src="https://yanxuan-item.nosdn.127.net/0ad157da3e7dffea9957db26fa7b509f.png?type=webp&imageView&quality=65&thumbnail=330x330"
-              mode="widthFix"></image>
-            <image class="icon-img" src="https://yanxuan.nosdn.127.net/40ad31f188d80cd4c8b92a4d4a410aa3.apk"
-              mode="widthFix"></image>
-            <view class="desc">
-              <view class="desc-title">夏日清爽</view>
-              <view class="desc-eval">好评率</view>
-              <view class="desc-price">￥59</view>
-            </view>
-          </view>
-        </view>
-
-        <view class="detail_wrapper">
-          <view class="detail-item">
-            <!-- 每件商品详情-->
-            <image
-              src="https://yanxuan-item.nosdn.127.net/0ad157da3e7dffea9957db26fa7b509f.png?type=webp&imageView&quality=65&thumbnail=330x330"
-              mode="widthFix"></image>
-            <image class="icon-img" src="https://yanxuan.nosdn.127.net/40ad31f188d80cd4c8b92a4d4a410aa3.apk"
-              mode="widthFix"></image>
-            <view class="desc">
-              <view class="desc-title">夏日清爽</view>
-              <view class="desc-eval">好评率</view>
-              <view class="desc-price">￥59</view>
-            </view>
-          </view>
-        </view>
-
-       
-
-      </view>
 
     
     </scroll-view>
