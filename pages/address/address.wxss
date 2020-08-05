@@ -23,13 +23,17 @@
   align-items: center;
 }
 .myaddress{
-  width: 100%;
+  width: 750rpx;
+
 }
 .addressblock1{
   width: 100%;
-  height: 20vh;
+  height: 15vh;
   display: flex;
   align-items: center;
+  margin-left: 20rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid gray;
 }
 .name{
   flex: 1;
@@ -63,4 +67,14 @@
   height: 30rpx;
   display: block;
   margin: auto auto;
+}
+.headerpic{
+  width: 750rpx;
+  height: 20rpx;
+  display: flex;
+  overflow: hidden;
+}
+.headerpic feImage{
+  width: 100%;
+  height: 100%;
 }

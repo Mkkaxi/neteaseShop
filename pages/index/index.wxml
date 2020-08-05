@@ -109,7 +109,7 @@
         <view class="detail_wrapper">
           <view class="detail-item" wx:for="{{item.good}}" wx:key="index">
             <!-- 每件商品详情-->
-            <image
+            <image  bind:tap="changegoods" data-index="{{index}}"
               src="{{item.imgUrl}}"
               mode="widthFix"></image>
             <image class="icon-img" src="https://yanxuan.nosdn.127.net/40ad31f188d80cd4c8b92a4d4a410aa3.apk"

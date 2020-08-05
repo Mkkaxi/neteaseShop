@@ -191,4 +191,14 @@
     </swiper-item>
   </swiper>
 </view>
+<!-- 固定在底部的立即购买 -->
+<view class="gotobuy">
+  <view class="myleftpic">
+    <view class="myflexcless"><image src="../../images/耳机.png" /></view>
+    <view class="myflexcless"><image src="../../images/购物车.png" /></view>
+    <view class="myflexcless"><image src="../../images/收藏.png" /></view>
+  </view>
+  <view class="myrightbutton"><button bind:tap="showsuccess" style="width:210rpx;height:70rpx;background:red">加入购物车</button></view>
+  <view class="myrightbutton"><button style="width:210rpx;height:70rpx;background:gold">立即购买</button></view>
+</view>
 

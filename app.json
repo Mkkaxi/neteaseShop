@@ -6,7 +6,8 @@
     "pages/goods/goods",
     "pages/personal/personal",
     "pages/address/address",
-    "pages/newAddress/newAddress"
+    "pages/newAddress/newAddress",
+    "pages/shoppingcart/shoppingcart"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -20,6 +21,12 @@
     "backgroundColor": "#fff",
     "selectedBackgroundColor": "#fff",
     "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./images/index.png",
+        "selectedIconPath": "./images/index1.png",
+        "text": "首页"
+      },
       {
         "pagePath": "pages/sort/sort",
         "iconPath": "./images/分类_未选择.png",

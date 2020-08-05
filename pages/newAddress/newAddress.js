@@ -7,35 +7,41 @@ Page({
   kk:function(e) {
     // console.log(e);
     let detailAddress = e.detail.value
-    let mydetailAddress = `ADDRESS.detailAddress`
+    // console.log(detailAddress);
+    // this.data.ADDRESS.detailAddress.push(detailAddress)
+    let mydetailAddress = `myaddress.detailAddress`
     this.setData({
       [mydetailAddress]:detailAddress
     })
   },
   myinput2:function(e) {
     // console.log(e);
-    let Pname = e.detail.value
-    let myPname = `ADDRESS.Pname`
+    let detailAddress = e.detail.value
+    // console.log(detailAddress);
+    // this.data.ADDRESS.detailAddress.push(detailAddress)
+    let mydetailAddress = `myaddress.Pname`
     this.setData({
-      [myPname]:Pname
+      [mydetailAddress]:detailAddress
     })
   },  
   myinput3:function(e) {
     // console.log(e);
-    let phonenumber = e.detail.value
-    let myphonenumber = `ADDRESS.phonenumber`
+    let detailAddress = e.detail.value
+    // console.log(detailAddress);
+    // this.data.ADDRESS.detailAddress.push(detailAddress)
+    let mydetailAddress = `myaddress.phonenumber`
     this.setData({
-      [myphonenumber]:phonenumber
+      [mydetailAddress]:detailAddress
     })
   },
   data: {
-    color:"gray",
-    ADDRESS:{
+    myaddress:{
       bindAddress:'',
       detailAddress:'',
       Pname:'',
-      phonenumber:'',
+      phonenumber:''
     },
+    color:"gray",
     opacity:1,
     hiddenMyAddress:'none',
     myBlockColor:-1,
@@ -175,7 +181,7 @@ Page({
     }
 
     let temp = this.data.addressInformation
-    let mybindAddress = `ADDRESS.bindAddress`
+    let mybindAddress = `myaddress.bindAddress`
     this.setData({
       addressInformation: temp,
       myBlockColor:myBlockColor,
@@ -200,11 +206,15 @@ Page({
   // 按钮携带数据跳转页面
   buttonListener:function(){
     let that = this
-    console.log(that.data.Pname);
-    wx.setStorageSync("bindAddress", that.data.ADDRESS.bindAddress)
-    wx.setStorageSync("detailAddress", that.data.ADDRESS.detailAddress)
-    wx.setStorageSync("Pname", that.data.ADDRESS.Pname)
-    wx.setStorageSync("phonenumber", that.data.ADDRESS.phonenumber)
+    let ADDRESS =  wx.getStorageSync("ADDRESS", ADDRESS)
+    console.log(ADDRESS);
+    // console.log(that.data.Pname);
+    ADDRESS.push(this.data.myaddress)
+    that.setData({
+      ADDRESS
+    })
+    wx.setStorageSync("ADDRESS", ADDRESS)
+
     wx.navigateTo({
       url:'/pages/address/address'
       // url:'/pages/address/address?bindAddress=' + 
@@ -219,7 +229,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
