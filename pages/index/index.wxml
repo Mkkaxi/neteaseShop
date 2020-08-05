@@ -91,17 +91,17 @@
     <scroll-view class="sort" scroll-x enable-flex>
       <block wx:for="{{menu}}" wx:key="index">
         <view class="sort-item" id="{{item.id}}" bindtap="changeMenu">
-          <view class="sort-item-title">
+          <view class="sort-item-title {{item.id==selectId?'selectTitle':''}}">
             <text>{{item.title}}</text>
           </view>
-          <view class="sort-item-text">
+          <view class="sort-item-text {{item.id==selectId?'selectText':''}}">
             <text>{{item.text}}</text>
           </view>
         </view>
       </block>
     </scroll-view>
 
-    <scroll-view class="details" scroll-x scroll-into-view="{{selectId}}" scroll-with-animation>
+    <scroll-view class="details" scroll-x scroll-into-view="{{selectId}}" scroll-with-animation  bindtouchstart="startX"  bindtouchend="endX">
 
       <view class="detail" wx:for="{{goods}}" wx:key="index" id="{{item.id}}">
         <!-- 页面-->
