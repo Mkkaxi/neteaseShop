@@ -231,26 +231,34 @@
 }
 
 .selectTitle {
-  
+  color: red;
 }
 .selectText {
+  background-color: red;
+  border-radius: 20rpx;
+  line-height: 38rpx;
+  width: 110rpx;
+  height: 38rpx;
+  text-align: center;
+  color: #fff;
   
 
 }
 
 .sort-item-text {
-  background-color: red;
-  border-radius: 20rpx;
-  height: 38rpx;
+  /* background-color: red; */
+  /* border-radius: 20rpx; */
   line-height: 38rpx;
   width: 110rpx;
+  height: 38rpx;
   text-align: center;
+ 
 }
 
 .sort-item-text text {
   font-size: 20rpx;
   /* color: #7f7f7f; */
-  color: #fff;
+  /* color: #fff; */
 
 }
 

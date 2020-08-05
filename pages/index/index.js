@@ -11,13 +11,77 @@ Page({
     })
   },
 
-  changeMenu: function(e) {
-    console.log(e.currentTarget.id);
+  changeMenu: function (e) {
+    // console.log(e);
+    // console.log(e.currentTarget.id);
     this.setData({
       selectId: e.currentTarget.id
     })
   },
 
+  startX: function (e) {
+    // console.log(e.changedTouches[0].pageX);
+    let startTime = new Date()
+    this.setData({
+      touchStartX: e.changedTouches[0].pageX,
+      startTime
+    })
+  },
+  endX: function(e) {
+    let endTime = new Date()
+    // console.log(e.changedTouches[0].pageX);
+    this.setData({
+      touchEndX: e.changedTouches[0].pageX,
+      endTime
+    })
+
+    let startX = this.data.touchStartX
+    let endX = this.data.touchEndX
+    let startTime = this.data.startTime
+    let scrollDistance =  startX - endX 
+    let scrollSpeed = scrollDistance / (endTime - startTime)
+    // console.log(scrollSpeed);
+
+    // console.log(scrollDistance);
+    let menu = ["jingxuan","kaimenhong","tehui","fushi","dianqi","yundong","muying","meishi", "quanqiu", "jvjia","xihu"]
+    let i = this.data.i
+    // console.log(i);
+    if(scrollDistance > 140 || scrollSpeed > 0.5) {
+      if(i == 10 ) {
+        i = 10
+      } else {
+        i++
+      }
+      this.setData({
+        selectId: menu[i],
+        i
+      })
+      
+    }
+    else if(scrollDistance < -140 || scrollSpeed < -0.5) {
+      if(i == 0 ) {
+        i = 0
+      } else {
+        i--
+      }
+      this.setData({
+        selectId: menu[i],
+        i
+      })
+    }
+    else {
+      this.setData({
+        selectId: menu[i],
+        i
+      })
+    }
+
+  },
+
+
+
+
+ 
   data: {
     sort: [{
         imgUrl: 'https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png',
@@ -169,6 +233,7 @@ Page({
     goods: [{
         id: "jingxuan",
         good: [{
+<<<<<<< HEAD
           imgUrl: "https://yanxuan-item.nosdn.127.net/abe1cbd870e6788978fa56a4f033db39.png?type=webp&imageView&quality=65&thumbnail=330x330",
           title: "D.va 可动人偶，守望先锋",
           eval: "98%",
@@ -193,11 +258,36 @@ Page({
           price: "99.9"
         }
       ]
+=======
+            imgUrl: "https://yanxuan-item.nosdn.127.net/32c2e79c69bea7ab55b9eb0fcc58de9c.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "耐穿又耐看，男式基础休闲牛津纺衬衫",
+            eval: "98%",
+            price: "99.9"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/32c2e79c69bea7ab55b9eb0fcc58de9c.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "耐穿又耐看，男式基础休闲牛津纺衬衫",
+            eval: "98%",
+            price: "99.9"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/32c2e79c69bea7ab55b9eb0fcc58de9c.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "耐穿又耐看，男式基础休闲牛津纺衬衫",
+            eval: "98%",
+            price: "99.9"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/32c2e79c69bea7ab55b9eb0fcc58de9c.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "耐穿又耐看，男式基础休闲牛津纺衬衫",
+            eval: "98%",
+            price: "99.9"
+          }
+        ]
+>>>>>>> bba9b48a8c0f9475edce44352f4856bdefa5ada0
       },
       {
         id: "kaimenhong",
-        good: [
-          {
+        good: [{
             imgUrl: "https://yanxuan-item.nosdn.127.net/950f49bd47c615e774fcfdae2fe9f3c0.png?type=webp&imageView&quality=65&thumbnail=330x330",
             title: "【丁磊直播款】全净皓齿变速声波电动牙刷",
             eval: "99%",
@@ -226,277 +316,280 @@ Page({
       {
         id: "tehui",
         good: [{
-          imgUrl: "https://yanxuan-item.nosdn.127.net/924117a25d62974fc7f9810d7df56e57.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "夏季不闷热，毛毛虫儿童网眼运动鞋 26-35码",
-          eval: "97%",
-          price: "129"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/924117a25d62974fc7f9810d7df56e57.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "夏季不闷热，毛毛虫儿童网眼运动鞋 26-35码",
-          eval: "97%",
-          price: "129"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/924117a25d62974fc7f9810d7df56e57.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "夏季不闷热，毛毛虫儿童网眼运动鞋 26-35码",
-          eval: "97%",
-          price: "129"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/924117a25d62974fc7f9810d7df56e57.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "夏季不闷热，毛毛虫儿童网眼运动鞋 26-35码",
-          eval: "97%",
-          price: "129"
-        }]
+            imgUrl: "https://yanxuan-item.nosdn.127.net/924117a25d62974fc7f9810d7df56e57.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "夏季不闷热，毛毛虫儿童网眼运动鞋 26-35码",
+            eval: "97%",
+            price: "129"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/924117a25d62974fc7f9810d7df56e57.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "夏季不闷热，毛毛虫儿童网眼运动鞋 26-35码",
+            eval: "97%",
+            price: "129"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/924117a25d62974fc7f9810d7df56e57.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "夏季不闷热，毛毛虫儿童网眼运动鞋 26-35码",
+            eval: "97%",
+            price: "129"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/924117a25d62974fc7f9810d7df56e57.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "夏季不闷热，毛毛虫儿童网眼运动鞋 26-35码",
+            eval: "97%",
+            price: "129"
+          }
+        ]
       },
       {
         id: "fushi",
         good: [{
-          imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
-          eval: "97%",
-          price: "16.9"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
-          eval: "97%",
-          price: "16.9"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
-          eval: "97%",
-          price: "16.9"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
-          eval: "97%",
-          price: "16.9"
-        }]
+            imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
+            eval: "97%",
+            price: "16.9"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
+            eval: "97%",
+            price: "16.9"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
+            eval: "97%",
+            price: "16.9"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
+            eval: "97%",
+            price: "16.9"
+          }
+        ]
       },
       {
         id: "dianqi",
         good: [{
-          imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
-          eval: "97%",
-          price: "16.9"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
-          eval: "97%",
-          price: "16.9"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
-          eval: "97%",
-          price: "16.9"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
-          eval: "97%",
-          price: "16.9"
-        }]
+            imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
+            eval: "97%",
+            price: "16.9"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
+            eval: "97%",
+            price: "16.9"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
+            eval: "97%",
+            price: "16.9"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
+            eval: "97%",
+            price: "16.9"
+          }
+        ]
       },
       {
         id: "yundong",
         good: [{
-          imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
-          eval: "97%",
-          price: "16.9"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
-          eval: "97%",
-          price: "16.9"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
-          eval: "97%",
-          price: "16.9"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
-          eval: "97%",
-          price: "16.9"
-        },]
+            imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
+            eval: "97%",
+            price: "16.9"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
+            eval: "97%",
+            price: "16.9"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
+            eval: "97%",
+            price: "16.9"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/65d63870ad2199963aa84f01f2d22ffd.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "上脚无负担，儿童EVA四季拖鞋 25-36码",
+            eval: "97%",
+            price: "16.9"
+          },
+        ]
       },
       {
         id: "muying",
         good: [{
-          imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
-          eval: "99%",
-          price: "259"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
-          eval: "99%",
-          price: "259"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
-          eval: "99%",
-          price: "259"
-        }]
+            imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
+            eval: "99%",
+            price: "259"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
+            eval: "99%",
+            price: "259"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
+            eval: "99%",
+            price: "259"
+          }
+        ]
       },
       {
         id: "meishi",
         good: [{
-          imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
-          eval: "99%",
-          price: "88"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
-          eval: "99%",
-          price: "88"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
-          eval: "99%",
-          price: "88"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
-          eval: "99%",
-          price: "88"
-        }]
+            imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
+            eval: "99%",
+            price: "88"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
+            eval: "99%",
+            price: "88"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
+            eval: "99%",
+            price: "88"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
+            eval: "99%",
+            price: "88"
+          }
+        ]
       },
       {
         id: "quanqiu",
         good: [{
-          imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
-          eval: "99%",
-          price: "259"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
-          eval: "99%",
-          price: "259"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
-          eval: "99%",
-          price: "259"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
-          eval: "99%",
-          price: "259"
-        }]
+            imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
+            eval: "99%",
+            price: "259"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
+            eval: "99%",
+            price: "259"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
+            eval: "99%",
+            price: "259"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
+            eval: "99%",
+            price: "259"
+          }
+        ]
       },
       {
         id: "jvjia",
         good: [{
-          imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
-          eval: "99%",
-          price: "88"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
-          eval: "99%",
-          price: "88"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
-          eval: "99%",
-          price: "88"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
-          eval: "99%",
-          price: "88"
-        }]
+            imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
+            eval: "99%",
+            price: "88"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
+            eval: "99%",
+            price: "88"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
+            eval: "99%",
+            price: "88"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/0a0803cfaec309d0e3b26735e4067db9.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "运动健身补蛋白，低脂纯牛奶250毫升*24盒",
+            eval: "99%",
+            price: "88"
+          }
+        ]
       },
       {
         id: "xihu",
         good: [{
-          imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
-          eval: "99%",
-          price: "259"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
-          eval: "99%",
-          price: "259"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
-          eval: "99%",
-          price: "259"
-        },
-        {
-          imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
-          title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
-          eval: "99%",
-          price: "259"
-        }]
+            imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
+            eval: "99%",
+            price: "259"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
+            eval: "99%",
+            price: "259"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
+            eval: "99%",
+            price: "259"
+          },
+          {
+            imgUrl: "https://yanxuan-item.nosdn.127.net/6c403d249129a804814d362de68fda2e.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            title: "银离子抗菌还防螨，日式格纹可机洗夏凉被",
+            eval: "99%",
+            price: "259"
+          }
+        ]
       },
     ],
+    i:0,
     navBarHeight: 210,
     searchWidth: 700,
     lineLeft: '',
-    isShowIcon: true,
     background: 0,
-    selectId: 'jingxuan'
+    selectId: 'jingxuan',
+    touchStartX: '',
+    touchEndX: '',
+    startTime:'',
+
   },
 
+
+
+
+
   onPageScroll: function (e) {
-    console.log(e);
     if (e.scrollTop > 0) {
       this.setData({
+        navBarHeight: 130,
+        searchWidth: 500,
         isShowIcon: false
       })
     } else {
       this.setData({
+        navBarHeight: 210,
+        searchWidth: 710,
         isShowIcon: true
       })
     }
-
-    if (e.scrollTop > 0) {
-        this.setData({
-          navBarHeight: 130,
-          searchWidth: 500,
-        })
-      
-    } 
-    else {
-      this.setData({
-        navBarHeight: 210,
-        searchWidth: 710,
-      })
-    }
-    
-
-
   },
   changegoods:function(e){
     // console.log(e);
