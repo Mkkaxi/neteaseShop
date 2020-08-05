@@ -4,8 +4,9 @@
     "pages/sort/sort",
     "pages/worthbuy/worthbuy",
     "pages/goods/goods",
-    "pages/text/text",
-    "pages/personal/personal"
+    "pages/personal/personal",
+    "pages/address/address",
+    "pages/newAddress/newAddress"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -30,6 +31,12 @@
         "iconPath": "./images/值得买未选择.png",
         "selectedIconPath": "./images/值得买已选择.png",
         "text": "分类"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "iconPath": "./images/个人.png",
+        "selectedIconPath": "./images/个人 1.png",
+        "text": "个人"
       }
     ]
   },

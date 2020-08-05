@@ -1,0 +1,29 @@
+<view class="newaddress" style="opacity:{{opacity}}">
+    <view><input type="text" value="{{ADDRESS.bindAddress}}" placeholder="省份、城市、区县" disabled="true" bind:tap="hiddenAddress" style="color:{{color}}"/></view>
+    <view><input type="text" placeholder="详细地址，如街道、楼牌号等" bindinput="kk"/></view>
+    <view><input type="text" placeholder="姓名"  value="{{Pname}}" bindinput="myinput2"/></view>
+    <view><input type="text" placeholder="手机号码" value="{{phonenumber}}" bindinput="myinput3"/></view>
+  </view>
+  <button style="width:90%;border-radius: 50px;" bind:tap="buttonListener">保存</button>
+
+  <!-- 固定的3/4屏，来获取地址 -->
+  <view class="fixedAddress" style="display:{{hiddenMyAddress}}">
+    <view class="fixedAddress-title">
+      <text>配送至</text>
+      <text style="display:inline-block;margin-left:20rpx;">{{addressInformation}}</text>
+      <text style="display:inline-block;float:right;padding-right:20rpx;color:{{mychangeColor}}" bind:tap="saveAddress" bind:tap="hiddenAddress">
+        确定
+      </text>
+    </view>
+    <view class="fixedAddress-city">
+      <scroll-view scroll-y="{{true}}" style="height: 65vh;">
+        <!-- 城市 -->
+        <view data-index="{{index}}" bind:tap="choseCity" wx:for="{{city}}" wx:key="index" style="display:{{showCity}}">
+          <text>{{item.city}}</text>
+        </view>
+        <view data-index="{{index}}" bind:tap="choseBlock" wx:for="{{blockList}}" data-classify="{{item}}" wx:key="index" style="display:{{showBlock}};color:{{index===myBlockColor?'red':'black'}}">
+          <text>{{item}}</text>
+        </view>
+      </scroll-view>
+    </view>
+  </view>

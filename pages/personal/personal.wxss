@@ -202,6 +202,8 @@
   display: flex;
   border: 1rpx solid #EAECED;
   box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
 }
 .bottom-items-wrapper{
   display: flex;
@@ -213,5 +215,12 @@
   height: 100rpx;
   width: 100rpx;
   background-size: contain;
-  margin-top: 55rpx;
+}
+.pic{
+  display: block;
+  margin: 0 auto;
+}
+.text{
+  display: block;
+  margin: 0 auto;
 }
