@@ -5,28 +5,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-    myitems:[
-      {price:"￥0",name:'回馈金'},
-      {price:"7",name:'红包'},
-      {price:"1",name:'优惠券'},
-      {price:"0",name:'津贴'},
-      {price:"0",name:'礼品卡'},
+    myitems: [
+      { price: "￥0", name: '回馈金' },
+      { price: "7", name: '红包' },
+      { price: "1", name: '优惠券' },
+      { price: "0", name: '津贴' },
+      { price: "0", name: '礼品卡' },
     ],
-    myserve:[
-      {pic:'../../images/订单.png',title:'我的订单'},
-      {pic:'../../images/周六.png',title:'周六一起拼'},
-      {pic:'../../images/售后.png',title:'售后服务'},
-      {pic:'../../images/邀请.png',title:'邀请返利'},
-      {pic:'../../images/优先购.png',title:'优先购'},
-      {pic:'../../images/积分中心.png',title:'积分中心'},
-      {pic:'../../images/会员俱乐部.png',title:'会员俱乐部'},
-      {pic:'../../images/地址管理.png',title:'地址管理'},
-      {pic:'../../images/账号安全.png',title:'帐号安全'},
-      {pic:'../../images/帮助与客服.png',title:'帮助与客服'},
-      {pic:'../../images/意见反馈.png',title:'意见反馈'},
+    myserve: [
+      { pic: '../../images/订单.png', title: '我的订单' },
+      { pic: '../../images/周六.png', title: '周六一起拼' },
+      { pic: '../../images/售后.png', title: '售后服务' },
+      { pic: '../../images/邀请.png', title: '邀请返利' },
+      { pic: '../../images/优先购.png', title: '优先购' },
+      { pic: '../../images/积分中心.png', title: '积分中心' },
+      { pic: '../../images/会员俱乐部.png', title: '会员俱乐部' },
+      { pic: '../../images/地址管理.png', title: '地址管理' },
+      { pic: '../../images/账号安全.png', title: '帐号安全' },
+      { pic: '../../images/帮助与客服.png', title: '帮助与客服' },
+      { pic: '../../images/意见反馈.png', title: '意见反馈' },
     ]
   },
+  changepage: function (e) {
+    // console.log(e);
+    if (e.currentTarget.dataset.index === 7) {
+      wx.navigateTo({
 
+        url: '/pages/address/address',
+
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */

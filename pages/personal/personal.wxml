@@ -69,11 +69,14 @@
   <!-- 底部部分 -->
   <view class="bottom-wrapper">
     <view class="bottom-items" wx:for="{{myserve}}">
-      <view class="bottom-items-wrapper">
-        <view class="pic"><image src="{{item.pic}}" /></view>
-        <view class="text"><text>{{item.title}}</text></view>
+      <view class="bottom-items-wrapper" bind:tap="changepage" data-index="{{index}}">
+        <view class="pic">
+          <image src="{{item.pic}}" />
+        </view>
+        <view class="text">
+          <text>{{item.title}}</text>
+        </view>
       </view>
     </view>
   </view>
-
 </view>

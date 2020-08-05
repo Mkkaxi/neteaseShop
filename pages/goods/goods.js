@@ -5,9 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    bindAddress:'至江西省南昌市青山湖区广兰大道13号范家新村菜鸟驿站',
-    hiddenMyAddress:'none',
-    myBlockColor:-1,
+    bindAddress: '至江西省南昌市青山湖区广兰大道13号范家新村菜鸟驿站',
+    hiddenMyAddress: 'none',
+    myBlockColor: -1,
     addressInformation: [],
     showCity: "block",
     showBlock: "none",
@@ -130,77 +130,77 @@ Page({
         { url: 'https://yanxuan-item.nosdn.127.net/93bd9a9414af2b3ed0afdccaf0dffed6.png?type=webp&imageView&quality=65&thumbnail=330x330', title: "魔兽争霸III：重制版 典藏版 实体礼盒", price: "￥818", discount: '每满249减30劵' },
       ],
     },
-    city: [        
-        {
-          city: '北京市',
-          block: ['东城区','西城区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','西城区','西城区','西城区'],
-          isShow: false
-        },
-        {
-          city: '天津市',
-          isShow: false,
-          block: ['111','西城区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','西城区','西城区','西城区']
-        },
-        {
-          city: '河北省',
-          isShow: false,
-          block: ['111','西城区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','西城区','西城区','西城区']
-        },
-        {
-          city: '山西省',
-          isShow: false,
-          block: ['111','西城区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','西城区','西城区','西城区']
-        },
-        {
-          city: '江西省',
-          isShow: false,
-          block: ['111','西城区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','西城区','西城区','西城区']
-        },
-        {
-          city: '安徽省',
-          isShow: false,
-          block: ['111','西城区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','西城区','西城区','西城区']
-        },
-        {
-          city: '浙江省',
-          isShow: false,
-          block: ['111','西城区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','西城区','西城区','西城区']
-        },
-        {
-          city: '福建省',
-          isShow: false,
-          block: ['111','西城区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','西城区','西城区','西城区']
-        },
-        {
-          city: '河南省',
-          isShow: false,
-          block: ['111','西城区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','西城区','西城区','西城区']
-        },
-        {
-          city: '湖北省',
-          isShow: false,
-          block: ['111','西城区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','西城区','西城区','西城区']
-        },
-        {
-          city: '广东省',
-          isShow: false,
-          block: ['111','西城区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','西城区','西城区','西城区']
-        },
-        {
-          city: '海南省',
-          isShow: false,
-          block: ['111','西城区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','西城区','西城区','西城区']
-        },
-        {
-          city: '云南省',
-          isShow: false,
-          block: ['111','西城区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','西城区','西城区','西城区']
-        },
-        {
-          city: '陕西省',
-          isShow: false,
-          block: ['111','西城区','朝阳区','丰台区','石景山区','海淀区','门头沟区','房山区','通州区','顺义区','西城区','西城区','西城区']
-        }
+    city: [
+      {
+        city: '北京市',
+        block: ['东城区', '西城区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '西城区', '西城区', '西城区'],
+        isShow: false
+      },
+      {
+        city: '天津市',
+        isShow: false,
+        block: ['111', '西城区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '西城区', '西城区', '西城区']
+      },
+      {
+        city: '河北省',
+        isShow: false,
+        block: ['111', '西城区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '西城区', '西城区', '西城区']
+      },
+      {
+        city: '山西省',
+        isShow: false,
+        block: ['111', '西城区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '西城区', '西城区', '西城区']
+      },
+      {
+        city: '江西省',
+        isShow: false,
+        block: ['111', '西城区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '西城区', '西城区', '西城区']
+      },
+      {
+        city: '安徽省',
+        isShow: false,
+        block: ['111', '西城区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '西城区', '西城区', '西城区']
+      },
+      {
+        city: '浙江省',
+        isShow: false,
+        block: ['111', '西城区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '西城区', '西城区', '西城区']
+      },
+      {
+        city: '福建省',
+        isShow: false,
+        block: ['111', '西城区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '西城区', '西城区', '西城区']
+      },
+      {
+        city: '河南省',
+        isShow: false,
+        block: ['111', '西城区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '西城区', '西城区', '西城区']
+      },
+      {
+        city: '湖北省',
+        isShow: false,
+        block: ['111', '西城区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '西城区', '西城区', '西城区']
+      },
+      {
+        city: '广东省',
+        isShow: false,
+        block: ['111', '西城区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '西城区', '西城区', '西城区']
+      },
+      {
+        city: '海南省',
+        isShow: false,
+        block: ['111', '西城区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '西城区', '西城区', '西城区']
+      },
+      {
+        city: '云南省',
+        isShow: false,
+        block: ['111', '西城区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '西城区', '西城区', '西城区']
+      },
+      {
+        city: '陕西省',
+        isShow: false,
+        block: ['111', '西城区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '西城区', '西城区', '西城区']
+      }
     ],
     blockList: []
   },
@@ -241,7 +241,7 @@ Page({
     }
   },
   // 控制3/4屏地址的显示
-  hiddenAddress(){
+  hiddenAddress() {
     if (this.data.hiddenMyAddress == "none") {
       this.setData({
         hiddenMyAddress: "block"
@@ -273,22 +273,37 @@ Page({
     let blockList = this.data.blockList
     let index = e.currentTarget.dataset.index
     let myBlockColor = index
-    if(addressInformation.length === 2){
+    if (addressInformation.length === 2) {
       addressInformation.pop()
     }
-    if(addressInformation.indexOf(blockList[index])=== -1){
+    if (addressInformation.indexOf(blockList[index]) === -1) {
       addressInformation.push(blockList[index])
     }
 
     let temp = this.data.addressInformation
     this.setData({
       addressInformation: temp,
-      myBlockColor:myBlockColor,
-      mychangeColor:'black',
-      bindAddress:temp,
+      myBlockColor: myBlockColor,
+      mychangeColor: 'black',
+      bindAddress: temp,
     })
   },
-  saveAddress(){
+  saveAddress() {
+
+  },
+  showsuccess: function () {
+    var nums = 1
+    var price = 427
+    wx.navigateTo({
+      url: '/pages/shoppingcart/shoppingcart?nums=' + nums + '&price=' + price
+    })
+    wx.showToast({
+      title: '加入购物车成功',
+      icon: 'success',
+      duration: 2000//持续的时间
+
+    })
+
 
   },
   /**

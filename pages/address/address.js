@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    ADDRESS:[],
     bindAddress:'',
     detailAddress:'',
     Pname:'',
@@ -38,18 +39,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var bindAddress = (wx.getStorageSync('bindAddress') || [])
-    // console.log(bindAddress);
-    var detailAddress = (wx.getStorageSync('detailAddress') || [])
-    // console.log(detailAddress);
-    var Pname = (wx.getStorageSync('Pname') || [])
-    var phonenumber = (wx.getStorageSync('phonenumber') || [])
-    this.setData({
-      bindAddress,
-      detailAddress,
-      Pname,
-      phonenumber
+    let ADDRESS = wx.getStorageSync("ADDRESS");
 
+    console.log(ADDRESS);
+    this.setData({
+      ADDRESS
     })
   },
 

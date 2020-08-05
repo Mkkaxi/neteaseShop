@@ -1,0 +1,38 @@
+<view class="page">
+  <view class="cart">
+    <view class="leftpic">
+      <image src="https://yanxuan-item.nosdn.127.net/abe1cbd870e6788978fa56a4f033db39.png?type=webp&imageView&thumbnail=160x0&quality=75" />
+    </view>
+    <view class="rightpart">
+      <view class="text">
+        <text>D.va 可动人偶 守望先锋</text>
+      </view>
+      <view class="bottompart">
+        <view class="half">
+          <text>￥{{price}}</text>
+        </view>
+        <view class="half">
+          <view class="jisuan">
+            <view class="items" bind:tap="reducenum">
+              <image src="../../images/减号.png" />
+            </view>
+            <view class="items">{{nums}}</view>
+            <view class="items" bind:tap="addnums">
+              <image src="../../images/加号.png" />
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="fixjiesuan">
+    <view class="selectall">
+      <radio value="全选" checked="{{ischeck}}" bind:tap="ischeck"></radio>
+      <text>全选</text>
+      </view>
+      <view class="paymoney">
+        <view class="textcolor">合计:￥{{sum}}</view>
+        <view class="paybutton"><button style="    align-items: center; display: flex; font-size: 30rpx;border-radius:50px;display:block;width:200rpx;height:80rpx;background:{{paycolor}}">结算</button></view>
+      </view>
+  </view>
+</view>

@@ -1,8 +1,11 @@
 <!-- 存放地址 -->
-<view class="myaddress">
+<view class="headerpic">
+  <image wx:for="{{10}}" style="width:75rpx;height:20rpx" src="https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/address-bg-67880192dc.png?imageView&type=webp" />
+</view>
+<view class="myaddress" wx:for="{{ADDRESS}}" wx:key="{{index}}">
   <view class="addressblock1">
-    <view class="name">{{Pname}}</view>
-    <view class="centerpart"><view class="phone">{{phonenumber}}</view><view class="saveaddress">{{bindAddress}}{{detailAddress}}</view></view>
+    <view class="name">{{item.Pname}}</view>
+    <view class="centerpart"><view class="phone">{{item.phonenumber}}</view><view class="saveaddress">{{item.bindAddress}}{{item.detailAddress}}</view></view>
     <view class="changeaddress"><image src="../../images/修改.png" /></view>
   </view>
 </view>

@@ -1,5 +1,5 @@
 <view class="newaddress" style="opacity:{{opacity}}">
-    <view><input type="text" value="{{ADDRESS.bindAddress}}" placeholder="省份、城市、区县" disabled="true" bind:tap="hiddenAddress" style="color:{{color}}"/></view>
+    <view><input type="text" value="{{myaddress.bindAddress}}" placeholder="省份、城市、区县" disabled="true" bind:tap="hiddenAddress" style="color:{{color}}"/></view>
     <view><input type="text" placeholder="详细地址，如街道、楼牌号等" bindinput="kk"/></view>
     <view><input type="text" placeholder="姓名"  value="{{Pname}}" bindinput="myinput2"/></view>
     <view><input type="text" placeholder="手机号码" value="{{phonenumber}}" bindinput="myinput3"/></view>

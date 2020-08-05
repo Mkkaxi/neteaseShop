@@ -233,30 +233,30 @@ Page({
     goods: [{
         id: "jingxuan",
         good: [{
-            imgUrl: "https://yanxuan-item.nosdn.127.net/32c2e79c69bea7ab55b9eb0fcc58de9c.png?type=webp&imageView&quality=65&thumbnail=330x330",
-            title: "耐穿又耐看，男式基础休闲牛津纺衬衫",
-            eval: "98%",
-            price: "99.9"
-          },
-          {
-            imgUrl: "https://yanxuan-item.nosdn.127.net/32c2e79c69bea7ab55b9eb0fcc58de9c.png?type=webp&imageView&quality=65&thumbnail=330x330",
-            title: "耐穿又耐看，男式基础休闲牛津纺衬衫",
-            eval: "98%",
-            price: "99.9"
-          },
-          {
-            imgUrl: "https://yanxuan-item.nosdn.127.net/32c2e79c69bea7ab55b9eb0fcc58de9c.png?type=webp&imageView&quality=65&thumbnail=330x330",
-            title: "耐穿又耐看，男式基础休闲牛津纺衬衫",
-            eval: "98%",
-            price: "99.9"
-          },
-          {
-            imgUrl: "https://yanxuan-item.nosdn.127.net/32c2e79c69bea7ab55b9eb0fcc58de9c.png?type=webp&imageView&quality=65&thumbnail=330x330",
-            title: "耐穿又耐看，男式基础休闲牛津纺衬衫",
-            eval: "98%",
-            price: "99.9"
-          }
-        ]
+          imgUrl: "https://yanxuan-item.nosdn.127.net/abe1cbd870e6788978fa56a4f033db39.png?type=webp&imageView&quality=65&thumbnail=330x330",
+          title: "D.va 可动人偶，守望先锋",
+          eval: "98%",
+          price: "427"
+        },
+        {
+          imgUrl: "https://yanxuan-item.nosdn.127.net/32c2e79c69bea7ab55b9eb0fcc58de9c.png?type=webp&imageView&quality=65&thumbnail=330x330",
+          title: "耐穿又耐看，男式基础休闲牛津纺衬衫",
+          eval: "98%",
+          price: "99.9"
+        },
+        {
+          imgUrl: "https://yanxuan-item.nosdn.127.net/32c2e79c69bea7ab55b9eb0fcc58de9c.png?type=webp&imageView&quality=65&thumbnail=330x330",
+          title: "耐穿又耐看，男式基础休闲牛津纺衬衫",
+          eval: "98%",
+          price: "99.9"
+        },
+        {
+          imgUrl: "https://yanxuan-item.nosdn.127.net/32c2e79c69bea7ab55b9eb0fcc58de9c.png?type=webp&imageView&quality=65&thumbnail=330x330",
+          title: "耐穿又耐看，男式基础休闲牛津纺衬衫",
+          eval: "98%",
+          price: "99.9"
+        }
+      ]
       },
       {
         id: "kaimenhong",
@@ -561,6 +561,14 @@ Page({
         navBarHeight: 210,
         searchWidth: 710,
         isShowIcon: true
+      })
+    }
+  },
+  changegoods:function(e){
+    // console.log(e);
+    if(e.currentTarget.dataset.index === 0){
+      wx.navigateTo({
+        url:'/pages/goods/goods'
       })
     }
   },

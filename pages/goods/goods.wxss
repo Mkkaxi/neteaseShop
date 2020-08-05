@@ -338,3 +338,37 @@ height: 60vh;
   padding-left: 20rpx;
   line-height: 100rpx;
 }
+.gotobuy{
+  width: 750rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  background-color: #FAFAFA;
+  display: flex;
+}
+.myleftpic{
+  width: 250rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.myflexcless{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myflexcless image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.myrightbutton{
+  width: 210rpx;
+  height: 80rpx;
+  margin: 15rpx 20rpx 15rpx 20rpx;
+}
+.myrightbutton button{
+  font-size: 20rpx;
+  border-radius: 50px;
+}

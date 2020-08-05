@@ -1,0 +1,117 @@
+.page{
+  width: 750rpx;
+  height: 98vh;
+  background-color: #FAFAFA;
+}
+.cart{
+  width: 700rpx;
+  height: 25vh;
+  margin: 0 auto;
+  margin-top: 2vh;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.leftpic{
+  width: 280rpx;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leftpic image{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #FAFAFA;
+}
+.rightpart{
+  width: 500rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.text{
+  font-size: 30rpx;
+  margin: 20rpx;
+  margin-top: 50rpx;
+  flex: 1;
+}
+.bottompart{
+  width: 500rpx;
+  flex: 2.5;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.half{
+  flex: 1;
+  margin-left: 20rpx;
+}
+.jisuan{
+  width: 210rpx;
+  height: 100rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.items{
+  width: 70rpx;
+  height: 100rpx;
+  border: 1rpx solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.items image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.fixjiesuan{
+  width: 750rpx;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  background-color:#FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.selectall{
+  width: 200rpx;
+  height: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paymoney{
+  width: 400rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  font-size: 30rpx;
+}
+.textcolor{
+  /* color: red; */
+  width: 200rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paybutton{
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  width: 200rpx;
+  height: 100%;
+}
