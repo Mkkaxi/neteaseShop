@@ -124,6 +124,7 @@
 
 .menu-item {
   width: 142rpx;
+  height: 150rpx;
   text-align: center;
   padding: 10rpx 0;
   box-sizing: border-box;
